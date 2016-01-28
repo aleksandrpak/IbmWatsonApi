@@ -1,5 +1,6 @@
 /deployment
 /theme
+/widgets
 .classpath
 .project
 *.launch
