@@ -80,9 +80,6 @@ public class User
 	 */
 	public static system.proxies.User initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
-		if (com.mendix.core.Core.isSubClassOf("Administration.Account", mendixObject.getType()))
-			return administration.proxies.Account.initialize(context, mendixObject);
-
 		return new system.proxies.User(context, mendixObject);
 	}
 
@@ -92,7 +89,7 @@ public class User
 		return system.proxies.User.initialize(context, mendixObject);
 	}
 
-	public static java.util.List<? extends system.proxies.User> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
+	public static java.util.List<system.proxies.User> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
 	{
 		java.util.List<system.proxies.User> result = new java.util.ArrayList<system.proxies.User>();
 		for (com.mendix.systemwideinterfaces.core.IMendixObject obj : com.mendix.core.Core.retrieveXPathQuery(context, "//System.User" + xpathConstraint))
