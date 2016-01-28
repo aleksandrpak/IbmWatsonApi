@@ -1,0 +1,6 @@
+/deployment
+.classpath
+.project
+*.launch
+*.mpr.lock
+*.mpr.bak
